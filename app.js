@@ -17,7 +17,13 @@ const customersRouter = require('./routes/customers');
 const app = express();
 
 // connect to the database
-mongoose.connect(process.env.DB_LINK, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false  });
+mongoose.connect(process.env.DB_LINK, { 
+  useNewUrlParser: true,
+  useUnifiedTopology: true, 
+  useFindAndModify: false,
+  serverSelectionTimeoutMS: 5000,
+  socketTimeoutMS: 45000,  
+});
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
