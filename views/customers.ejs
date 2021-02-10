@@ -1,0 +1,43 @@
+
+    <!-- navbar -->
+    <%- include("partials/navbar.ejs"); %>
+
+    <!-- customer list -->
+    <div class="container ">
+        <div class="my-2">
+            <h2 class='text-center title pt-3'><i class="fas fa-users text-danger"></i> &nbsp; Customers </h2>
+        </div>
+        <div class="table-responsive-xl">
+            <table class="table table-hover table-bordered">
+                <caption>List of Customers</caption>
+
+                <thead class=" ">
+                    <tr class="bg-danger text-white">
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Account Number</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Balance</th>
+                        <th scope="col"> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% customers.forEach((customer,index) => { %>
+                        <tr>
+                            <th scope="row"><%= index+1 %></th>
+                            <td><%= customer.name %></td>
+                            <td><%= customer.accountNo %></td>
+                            <td><%= customer.email %></td>
+                            <td><i class="fas fa-rupee-sign"></i> &nbsp; <%= customer.balance %></td>
+                            <td class="text-center"><a href="/customers/<%= customer._id %>" class=" btn btn-outline-primary py-1" style=" font-size: 16px;"> View & Transfer </a></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <%- include("partials/footer.ejs"); %>

@@ -1,0 +1,40 @@
+
+    <!-- navbar -->
+    <%- include("partials/navbar.ejs"); %>
+
+    <!-- customer list -->
+    <div class="container ">
+        <div class="my-2">
+            <h2 class='text-center title pt-3'> Transaction History </h2>
+        </div>
+        <div class="table-responsive-xl">
+            <table class="table table-hover table-bordered">
+                <caption>Transaction History</caption>
+
+                <thead class="bg-danger text-white">
+                    <tr>
+                        <th scope="col">Transaction Id</th>
+                        <th scope="col">Sender</th>
+                        <th scope="col">Receiver</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% transactions.forEach((transaction) => { %>
+                        <tr>
+                            <th scope="row"><%= transaction.transactionId %></th>
+                            <td><%= transaction.senderName %></td>
+                            <td><%= transaction.receiverName %></td>
+                            <td><%= transaction.date %></td>
+                            <td> <i class="fas fa-rupee-sign"></i> <%= transaction.amount %></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <%- include("partials/footer.ejs"); %>

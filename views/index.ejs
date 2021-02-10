@@ -1,0 +1,82 @@
+
+  <!-- navbar -->
+  <%- include("partials/navbar.ejs"); %>
+
+  <!-- header -->
+  <section id='header' class='d-flex align-item-center mt-0'>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-11 mx-auto">
+          <div class="row">
+            <div class="col-md-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex justify-content-center flex-column">
+              <h2 class='text-center'>Make your Transction easy with <strong class="brand-name"><br>PAL BANK</strong>
+              </h2>
+              <h4 class='text-center'>We are the best Service provider</h4>
+              <div class="mt-2 text-center">
+                <a href="#services" class="btn-get-started">Our Services</a>
+              </div>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2 header-img">
+              <img src='/images/bank1.jpeg' class='img-fluid animated' alt="About" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- services -->
+  <div class="bg-color" id="services">
+    <div class="my-3">
+      <h2 class='text-center title pt-3'>Our Services</h2>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-10 mx-auto">
+          <div class="card-group gy-3 px-auto">
+
+            <div class="mx-auto mb-4 cardHover">
+              <a href="/customers"  style="text-decoration: none;">
+                <div class="card" style="width: 12rem; height: 12rem;">
+                  <img src='/images/customers.png' class="card-img-top mx-auto" alt=Transact
+                    style="width: 8rem; height: 8rem;" />
+                  <div class="card-body">
+                    <h5 class="card-title font-weight-bold text-center">Customers</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+
+            <div class="mx-auto mb-4 cardHover">
+              <a href="/transfer"  style="text-decoration: none;">
+                <div class="card" style="width: 12rem; height: 12rem;">
+                  <img src='/images/transact.jpg' class="card-img-top mx-auto" alt=Transact
+                    style="width: 8rem; height: 8rem;" />
+                  <div class="card-body">
+                    <h5 class="card-title font-weight-bold text-center">Transfer</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="mx-auto mb-4 cardHover">
+              <a href="/thistory"  style="text-decoration: none;">
+                <div class="card" style="width: 12rem; height: 12rem;">
+                  <img src='/images/history1.jpg' class="card-img-top mx-auto" alt=Transact
+                    style="width: 7rem; height: 7rem;" />
+                  <div class="card-body">
+                    <h5 class="card-title font-weight-bold text-center">Transaction History</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <%- include("partials/footer.ejs"); %>
