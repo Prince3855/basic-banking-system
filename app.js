@@ -20,9 +20,7 @@ const app = express();
 mongoose.connect(process.env.DB_LINK, { 
   useNewUrlParser: true,
   useUnifiedTopology: true, 
-  useFindAndModify: false,
-  serverSelectionTimeoutMS: 5000,
-  socketTimeoutMS: 45000,  
+  useFindAndModify: false, 
 });
 
 const db = mongoose.connection;
